@@ -1,17 +1,16 @@
-# CSE 168 – Distributed Software Systems (Fall 2025)
+# CSE 168: Distributed Software Systems
 
-Notes and materials for UC Merced's CSE 168 course taught by Prof. Xiaoyi Lu.  
-This repo includes:
-- Lecture notes
-- Projects
-- Exam guides
-- References
+This repository contains my notes, lab writeups, and resources from studying **Distributed Systems**.  
+It serves as a personal knowledge base, combining lecture notes and references on distributed computing concepts.  
+
+---
 
 ## Structure
-- `/lectures`: Notes per lecture/week
-- `/projects`: Course projects
-- `/exams`: Study guides
-- `/resources`: Extra readings + references
+- **`notes/`** → Notes from lectures and study sessions  
+- **`projects/`** → projects and implementation notes  
+- **`resources/`** → Supplemental readings and references  
+
+---
 
 ## Disclaimer
-These are **personal study notes**, not official course material.
+These are **personal study notes** and are not official course material.
