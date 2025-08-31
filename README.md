@@ -1,16 +1,17 @@
-# CSE 168: Distributed Software Systems
+# Distributed Systems
 
-This repository contains my notes, lab writeups, and resources from studying **Distributed Systems**.  
-It serves as a personal knowledge base, combining lecture notes and references on distributed computing concepts.  
+Personal knowledge base for studying **Distributed Systems**.  
+Includes notes, project writeups, and curated resources on core concepts and implementations.  
 
 ---
 
 ## Structure
-- **`notes/`** → Notes from lectures and study sessions  
-- **`projects/`** → projects and implementation notes  
+- **`notes/`** → Lecture and study notes  
+- **`projects/`** → Lab projects and implementation notes  
 - **`resources/`** → Supplemental readings and references  
 
 ---
 
 ## Disclaimer
-These are **personal study notes** and are not official course material.
+All content here reflects my own study and work.  
+These are **personal notes and projects**, not official course material.
