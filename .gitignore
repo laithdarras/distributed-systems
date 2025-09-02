@@ -1,0 +1,25 @@
+# CMake build artifacts
+cmake/build/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# Compiled binaries / libraries
+*.o
+*.so
+*.a
+*.out
+*.exe
+
+# Editor/OS junk
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Docker leftovers
+*.tar
