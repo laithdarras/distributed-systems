@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/hw_grpc_proto.dir/helloworld.grpc.pb.cc.o -c /grpc/examples/cpp/helloworld/cmake/build/helloworld.grpc.pb.cc",
+  "file": "/grpc/examples/cpp/helloworld/cmake/build/helloworld.grpc.pb.cc"
+},
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/hw_grpc_proto.dir/helloworld.pb.cc.o -c /grpc/examples/cpp/helloworld/cmake/build/helloworld.pb.cc",
+  "file": "/grpc/examples/cpp/helloworld/cmake/build/helloworld.pb.cc"
+},
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/greeter_async_server.dir/greeter_async_server.cc.o -c /grpc/examples/cpp/helloworld/greeter_async_server.cc",
+  "file": "/grpc/examples/cpp/helloworld/greeter_async_server.cc"
+},
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/greeter_async_client.dir/greeter_async_client.cc.o -c /grpc/examples/cpp/helloworld/greeter_async_client.cc",
+  "file": "/grpc/examples/cpp/helloworld/greeter_async_client.cc"
+},
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/greeter_async_client2.dir/greeter_async_client2.cc.o -c /grpc/examples/cpp/helloworld/greeter_async_client2.cc",
+  "file": "/grpc/examples/cpp/helloworld/greeter_async_client2.cc"
+},
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/greeter_server.dir/greeter_server.cc.o -c /grpc/examples/cpp/helloworld/greeter_server.cc",
+  "file": "/grpc/examples/cpp/helloworld/greeter_server.cc"
+},
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/greeter_client.dir/greeter_client.cc.o -c /grpc/examples/cpp/helloworld/greeter_client.cc",
+  "file": "/grpc/examples/cpp/helloworld/greeter_client.cc"
+},
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/greeter_callback_server.dir/greeter_callback_server.cc.o -c /grpc/examples/cpp/helloworld/greeter_callback_server.cc",
+  "file": "/grpc/examples/cpp/helloworld/greeter_callback_server.cc"
+},
+{
+  "directory": "/grpc/examples/cpp/helloworld/cmake/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/grpc/examples/cpp/helloworld/cmake/build -isystem /root/.local/include -std=gnu++11 -o CMakeFiles/greeter_callback_client.dir/greeter_callback_client.cc.o -c /grpc/examples/cpp/helloworld/greeter_callback_client.cc",
+  "file": "/grpc/examples/cpp/helloworld/greeter_callback_client.cc"
+}
+]

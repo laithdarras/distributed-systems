@@ -19,6 +19,8 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <chrono>
+#include <cstdlib>
 
 #include <grpcpp/grpcpp.h>
 
@@ -71,12 +73,14 @@ class GreeterClient {
   std::unique_ptr<Greeter::Stub> stub_;
 };
 
-int main(int argc, char** argv) {
-  // Instantiate the client. It requires a channel, out of which the actual RPCs
+
+// Instantiate the client. It requires a channel, out of which the actual RPCs
   // are created. This channel models a connection to an endpoint specified by
   // the argument "--target=" which is the only expected argument.
   // We indicate that the channel isn't authenticated (use of
   // InsecureChannelCredentials()).
+int main(int argc, char** argv) {
+  // Parse --target=<host:port> (original behavior)
   std::string target_str;
   std::string arg_str("--target");
   if (argc > 1) {
@@ -87,8 +91,7 @@ int main(int argc, char** argv) {
       if (arg_val[start_pos] == '=') {
         target_str = arg_val.substr(start_pos + 1);
       } else {
-        std::cout << "The only correct argument syntax is --target="
-                  << std::endl;
+        std::cout << "The only correct argument syntax is --target=" << std::endl;
         return 0;
       }
     } else {
@@ -98,11 +101,39 @@ int main(int argc, char** argv) {
   } else {
     target_str = "localhost:50051";
   }
+
+  // --- Modifications for CSE168 Lab 1: simple RTT + throughput ---
+  // Controls via environment variables (use defaults if not set)
+  const char* n_env = std::getenv("NREQ");
+  const char* p_env = std::getenv("PAYLOAD");
+  int N = n_env ? std::max(1, std::atoi(n_env)) : 1000;    // number of RPCs
+  int P = p_env ? std::max(1, std::atoi(p_env)) : 1;       // payload size (bytes)
+
   GreeterClient greeter(
       grpc::CreateChannel(target_str, grpc::InsecureChannelCredentials()));
-  std::string user("world");
-  std::string reply = greeter.SayHello(user);
-  std::cout << "Greeter received: " << reply << std::endl;
+
+  // Create synthetic payload placed in HelloRequest.name
+  std::string user(P, 'x');
+
+  using clock = std::chrono::steady_clock;
+  auto t0 = clock::now();
+  for (int i = 0; i < N; ++i) {
+    (void)greeter.SayHello(user); // ignore reply text to minimize I/O noise
+  }
+  auto t1 = clock::now();
+
+  std::chrono::duration<double> dur = t1 - t0;
+  double sec = dur.count();
+  double avg_us = (sec / N) * 1e6;
+  double rps = N / sec;
+
+  std::cout << "target=" << target_str
+            << " sent=" << N
+            << " payload=" << P
+            << " time=" << sec << "s"
+            << " avg_rtt=" << avg_us << "us"
+            << " throughput=" << rps << " req/s"
+            << std::endl;
 
   return 0;
 }
