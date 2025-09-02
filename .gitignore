@@ -23,3 +23,6 @@ Thumbs.db
 
 # Docker leftovers
 *.tar
+
+# developer-specific files
+workflow.txt
